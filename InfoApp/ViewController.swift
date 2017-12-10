@@ -84,9 +84,9 @@ class ViewController: UIViewController {
         let modeloAparelho = UIDevice.current.modelName
         print("Modelo do aparelho \(modeloAparelho)")
     
+        UIDevice.current.isBatteryMonitoringEnabled = true
         let nivelBateria = UIDevice.current.batteryLevel
-        //*(-1) para deixar o número positivo, de padrão vem como negativo.
-        print("Nível da bateria \(nivelBateria*100*(-1))%")
+        print("Nível da bateria \(nivelBateria*100)%")
         
         print("Espaço total \(espacoTotal()!)")
         print("Espaço livre \(espacoLivre()!)")
